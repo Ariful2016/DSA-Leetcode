@@ -1,17 +1,17 @@
-package Algorithms;
+package Algorithms.BinarySearch;
 
-public class FindFloorNumber {
+public class FindCeilingNumber {
     public static void main(String[] args) {
 
         int [] arr = {-32,-13,-7,12,34,56,78,99,123,234};
         int target = 50;
-        int ans = FloorNumber(arr, target);
+        int ans = CeilingNumber(arr, target);
         System.out.println(ans);
 
 
     }
 
-    static int FloorNumber(int[] arr, int target){
+    static int CeilingNumber(int[] arr, int target){
         int start = 0;
         int end = arr.length - 1;
         if (target > arr[end]) return -1;
@@ -25,7 +25,7 @@ public class FindFloorNumber {
                 return middle;
             }
         }
-        return end;
+        return start;
     }
 
 }

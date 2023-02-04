@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.BinarySearch;
 
 //https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
 public class FindEvenDigit {

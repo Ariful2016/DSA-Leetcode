@@ -1,4 +1,4 @@
-package Algorithms;
+package Algorithms.BinarySearch;
 
 public class LinearSearch {
     public static void main(String[] args) {
