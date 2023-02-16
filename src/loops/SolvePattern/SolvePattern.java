@@ -2,7 +2,7 @@ package loops.SolvePattern;
 
 public class SolvePattern {
     public static void main(String[] args) {
-          pattern31(4);
+          pattern12(5);
     }
          /*
             * * * * *
@@ -105,6 +105,190 @@ public class SolvePattern {
             }
             // print new line
             System.out.println();
+        }
+    }
+
+    /*
+             *
+           * *
+         * * *
+       * * * *
+     * * * * *
+     */
+    static void pattern6(int n){
+        for (int i = 0; i < n; i++) {
+            int c =  n - i;
+            for (int s = 1; s < c; s++) {
+                System.out.print("  ");
+            }
+            for (int j = i; j >= 0; j--) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+     * * * * *
+       * * * *
+         * * *
+           * *
+             *
+     */
+
+    static void pattern7(int n){
+        for (int i = 0; i < n; i++) {
+            int c =  n - i;
+            for (int s = i; s >= 0; s--) {
+                System.out.print("  ");
+            }
+            for (int j = i; j < n; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*
+         *
+        ***
+       *****
+      *******
+     *********
+     */
+
+    static void pattern8(int n){
+
+            for (int i = 1; i <= 2 * n ; i+=2) {
+
+                // calculate numbers of column
+                //int c = i > n  ? 2 * n - i : i;
+
+                // calculate space of every column
+                int space = n - i;
+                for (int s = 0; s <= space ; s+=2) {
+                    System.out.print(" ");
+                }
+
+                // inner loop
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("*");
+                }
+                // print new line
+                System.out.println();
+            }
+
+    }
+
+    /*
+     *********
+      *******
+       *****
+        ***
+         *
+     */
+    static void pattern9(int n){
+
+        for (int i = 1; i <= 2 * n ; i+=2) {
+
+            // calculate numbers of column
+            //int c = i > n  ? 2 * n - i : i;
+
+            // calculate space of every column
+            int space = n - i;
+            for (int s = 0; s >= space ; s-=2) {
+                System.out.print(" ");
+            }
+
+            // inner loop
+            for (int j = 2*n; j>i; j--) {
+                System.out.print("*");
+            }
+            // print new line
+            System.out.println();
+        }
+
+    }
+
+    /*
+         *
+        * *
+       * * *
+      * * * *
+     * * * * *
+
+     */
+
+    static void pattern10(int n){
+
+        for (int i = 1; i <= n ; i++) {
+
+            // calculate numbers of column
+            //int c = i > n  ? 2 * n - i : i;
+
+            // calculate space of every column
+            int space = n - i;
+            for (int s = 0; s <= space ; s++) {
+                System.out.print(" ");
+            }
+
+            // inner loop
+            for (int j = i; j>=1; j--) {
+                System.out.print("* ");
+            }
+            // print new line
+            System.out.println();
+        }
+
+    }
+
+    /*
+     * * * * *
+      * * * *
+       * * *
+        * *
+         *
+
+     */
+
+    static void pattern11(int n){
+
+        for (int i = 1; i <= n ; i++) {
+
+            // calculate numbers of column
+            //int c = i > n  ? 2 * n - i : i;
+
+            // calculate space of every column
+            //int space = n - i;
+            for (int s = i; s >= 1; s--) {
+                System.out.print(" ");
+            }
+
+            // inner loop
+            for (int j = n; j>=i; j--) {
+                System.out.print("* ");
+            }
+            // print new line
+            System.out.println();
+        }
+
+    }
+
+    static void pattern12(int n){
+        for (int i = 1; i <= 2*n; i++) {
+            // calculate numbers of column
+            int c = i > n  ? 2 * n - i : i;
+
+            // calculate space of every column
+            int space = n - c;
+            for (int s = c; s >= 1 ; s--) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <=5 ; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+
         }
     }
 
